@@ -40,7 +40,7 @@ class FeatureScaling:
         """
         datos_escalados = scaler.fit_transform(self.dataframe[self.lista_numericas])
         # Guardar el modelo
-        with open('transformer_scaler.pkl', 'wb') as f:
+        with open('transformers/transformer_scaler.pkl', 'wb') as f:
             pickle.dump(scaler, f)
         return pd.DataFrame(datos_escalados, columns=self.lista_numericas, index=self.dataframe.index)
 
